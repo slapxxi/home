@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title><%= author[:name] %></title>
+
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+  </head>
+
+  <body>
+    <header class="header">
+      <h1>
+        <%= smart_link @conn, author[:name],
+            to: page_path(@conn, :index),
+            title: "Home"%>
+      </h1>
+
+      <nav>
+        <ul>
+          <li><%= smart_link @conn, "Posts", to: post_path(@conn, :index) %></li>
+          <li><%= smart_link @conn, "Projects", to: page_path(@conn, :projects) %></li>
+          <li><%= smart_link @conn, "About", to: page_path(@conn, :about) %></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content">
+      <%= @inner %>
+    </div>
+
+    <footer class="footer">
+      <ul>
+        <li><%= link "Twitter", to: author[:twitter] %></li>
+        <li><%= link "Github", to: author[:github] %></li>
+        <li><%= link "Mail", to: author[:email] %></li>
+      </ul>
+
+      <small>All Rights Reserved 2015.</small>
+      <small>
+        Developed with
+        <a href="<%= links[:elixir]%>">Elixir</a>
+        &
+        <a href="<%= links[:phoenix]%>">Phoenix</a>
+      </small>
+    </footer>
+
+    <script>require("web/static/js/app")</script>
+  </body>
+</html>

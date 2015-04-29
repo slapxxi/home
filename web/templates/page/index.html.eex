@@ -1,0 +1,39 @@
+<div id="intro">
+  <section class="intro">
+    <h1>Slava Pavlutin</h1>
+    <h2>Adequate Software Engineer</h2>
+  </section>
+
+  <section id="iwrite" class="section">
+    <h1><%= link "I write", to: post_path(@conn, :index) %></h1>
+    <h2>What I Honestly Think</h2>
+    <p>
+      You can read me right
+      <%= link "here", to: post_path(@conn, :index) %>.
+      Feel free to visit me anytime and read through my ramblings.
+    </p>
+  </section>
+
+  <section id="icode" class="section">
+    <h1><%= link "I Code", to: page_path(@conn, :projects) %></h1>
+    <h2>Being clear and test-first</h2>
+    <p>
+      I code because I love creating something from nothing. I love to
+      work with various levels of abstractions and manipulate air castles.
+      When I code I want the product to be of very high quality and the
+      resulting code to be clear as a day.
+    </p>
+  </section>
+
+  <section id="italk" class="section">
+    <h1><%= link "I Talk", to: page_path(@conn, :about) %></h1>
+    <h2>All the time</h2>
+
+    <p>
+      Even though I consider myself an introvert, I'm not afraid of making
+      connections with other people. Indeed, considering my experience and
+      the desire to make friends all over the world, I'm truly a honest and
+      pleasant social unit. :)
+    </p>
+ </section>
+</div>

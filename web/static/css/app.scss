@@ -1,0 +1,188 @@
+@import "normalize";
+@import "base";
+
+.content {
+  @include container;
+  margin: 5em auto;
+  font-size: 1.1em;
+}
+
+.header {
+  @include container;
+  overflow: hidden;
+  margin-bottom: 3.5em;
+
+  font-family: $header-font-family;
+  text-transform: lowercase;
+  color: $grey-very-light;
+
+  a {
+    color: $font-clr-light;
+    &:hover { color: $link-color; }
+
+    &.active {
+      color: $grey-light;
+    }
+  }
+
+  > h1 {
+    @include monofont;
+    float: left;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  > nav {
+    overflow: hidden;
+    float: right;
+    margin-top: 0.6em;
+
+    > ul {
+      @include reset-list;
+      float: right;
+
+      > li {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 0.8em;
+      }
+    }
+  }
+
+  > .breadcrumbs {
+    clear: both;
+    font-size: 0.9em;
+    a {
+      color: $link-color;
+    }
+  }
+}
+
+
+.footer {
+  @include container;
+  margin-top: 3.5em;
+
+  > ul {
+    @include reset-list;
+
+    > li{
+      display: inline-block;
+      margin-right: 1em;
+      text-transform: lowercase;
+    }
+  }
+
+  small {
+    font-size: 0.3em;
+    font-family: $header-font-family;
+    color: $grey-very-light;
+  }
+}
+
+
+#intro {
+  ul#menu {
+    @include reset-list;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    > li {
+      display: inline-block;
+      margin: 1em;
+    }
+  }
+
+  .section, .intro {
+    clear: both;
+    margin: 5em 0;
+
+    h1 {
+      @include monofont;
+      margin-bottom: 0.1em;
+      text-align: center;
+      font-size: 1.6em;
+    }
+
+    h2 {
+      @include monofont;
+      margin-top: 0;
+      text-align: center;
+      color: $font-clr-very-light;
+    }
+
+    > p {
+      max-width: 700px;
+      margin: 1.5em auto;
+      text-align: justify;
+    }
+
+    > ul {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media (min-width: 700px) {
+    .section {
+      float: left;
+      clear: none;
+      width: 30%;
+      margin-right: 3.3%;
+
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+.posts {
+  > ul { @include reset-list; }
+}
+
+
+.post {
+  > hgroup {
+    h1, h2 {
+      a {color: $font-clr-middle;}
+      a:hover {color: $link-color;}
+    }
+    > h1 {
+      color: $green-light;
+    }
+
+    > h1, > h2 {
+      margin-bottom: 0.1em;
+    }
+
+    > time {
+      font-size: 0.8em;
+      color: $font-clr-very-light;
+    }
+  }
+
+  > h3, > h4, > h5, > h6 {
+    color: $font-clr-em;
+  }
+
+  > footer {
+
+    > .post-author {
+        border-top: 1px dashed $grey-middle;
+        margin-top: 3.5em;
+      > h2 { font-size: 1.1em; }
+      > img {
+        float: right;
+        width: 150px;
+        height: 150px;
+        margin: 0 1em;
+        border-radius: 200px;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+<section>
+  <h1>About Me</h1>
+  <p>
+    My name is <%= author[:name] %>. I live in <%= author[:location] %>
+    and write code in my spare time.
+  </p>
+</section>

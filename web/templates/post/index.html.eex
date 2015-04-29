@@ -1,0 +1,20 @@
+<section class="posts">
+  <h1>Posts</h1>
+
+  <ul>
+  <%= for post <- @posts do %>
+    <li class="post">
+      <h2>
+        <%= post.title %>
+      </h2>
+      <p>
+        <%= post.preview %>
+      </p>
+      <p>
+        <%= link "Keep reading", to: post_path(@conn, :show, post.slug),
+            class: "btn"%>
+      </p>
+    </li>
+  <% end %>
+  </ul>
+</section>

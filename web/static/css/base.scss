@@ -1,0 +1,125 @@
+$header-font-family: "Raleway", sans-serif;
+$main-font-family: Didot, serif;
+
+$grey: #21213e;
+$grey-middle: #4a4a65;
+$grey-light: #68687f;
+$grey-very-light: #8f8f95;
+
+$blue: #17f;
+$purple: #96c;
+$green: #3b8;
+$green-light: #3c9;
+$orange: #f73;
+
+$red: #e24;
+
+$font-clr: $grey;
+$font-clr-em: $green;
+$font-clr-middle: $grey-middle;
+$font-clr-light: $grey-light;
+$font-clr-very-light: $grey-very-light;
+
+$em-color: $green;
+$link-color: $orange;
+
+@mixin container {
+  clear: both;
+  min-width: 300px;
+}
+
+@mixin reset-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin monofont {
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+}
+
+
+body {
+  padding: 1.5em;
+  font-size: 18px;
+  font-family: $main-font-family;
+  color: $grey-middle;
+}
+
+p {
+  margin: 2em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1.8em auto;
+  font-family: $header-font-family;
+}
+
+h1 {
+  font-weight: 600;
+  color: $font-clr;
+}
+
+h2 {
+  font-weight: 500;
+  color: $font-clr-middle;
+}
+
+h3, h4, h5, h6 {
+  font-weight: 400;
+  color: $font-clr-light;
+}
+
+ul, ol {
+  color: $font-clr-light;
+}
+
+a:link, a:visited {
+  transition: all 0.5s;
+  text-decoration: none;
+  color: $link-color;
+}
+
+a:hover, a:active {
+  color: $font-clr-middle;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 1.1em;
+  color: $font-clr-very-light;
+  color: $green;
+}
+
+strong {
+  font-weight: 600;
+  color: black;
+}
+
+em {
+  font-style: italic;
+  color: $font-clr-light;
+}
+
+a.btn {
+  $btn-clr: $link-color;
+  $btn-clr-hvr: $font-clr-light;
+
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: 1px solid $btn-clr;
+  border-radius: 5px;
+  margin: 0.2em 0;
+  font-family: $header-font-family;
+  font-size: 0.8em;
+  color: $btn-clr;
+
+  &:hover {
+    text-decoration: none;
+    border-color: $btn-clr-hvr;
+    color: $btn-clr-hvr;
+  }
+}
